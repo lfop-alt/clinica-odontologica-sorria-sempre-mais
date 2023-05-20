@@ -2,11 +2,7 @@ import React from "react";
 import AplicationRouter from "./routes";
 
 function App() {
-  return (
-    <div>
-      <AplicationRouter />
-    </div>
-  );
+    return <AplicationRouter />;
 }
 
 export default App;

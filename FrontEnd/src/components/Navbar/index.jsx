@@ -20,7 +20,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 
 import "./index.css";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -97,7 +97,7 @@ export default function PersistentDrawerLeft() {
                         boxSizing: "border-box",
                     },
                 }}
-                variant="persistent"
+                variant="temporary"
                 anchor="left"
                 open={open}
             >
@@ -112,10 +112,13 @@ export default function PersistentDrawerLeft() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {["Dashboard", "Agenda", "Send email", "Drafts"].map(
+                    {["Dashboard", "Agendamento", "Send email", "Drafts"].map(
                         (text, index) => (
                             <ListItem key={text} disablePadding>
-                                <Link>
+                                <Link
+                                    to={`/${text.toLowerCase()}`}
+                                    style={{ textDecoration: "none" }}
+                                >
                                     <ListItemButton sx={{ color: "#fff" }}>
                                         <ListItemIcon sx={{ color: "#fff" }}>
                                             {index % 2 === 0 ? (

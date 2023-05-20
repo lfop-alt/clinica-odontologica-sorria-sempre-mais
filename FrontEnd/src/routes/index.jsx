@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "../pages/Login";
 import PrivateRoute from "./privateRouter";
 import Dashboard from "../pages/Dashboard";
+import Agendamento from "../pages/Agendamento";
 
 export default function AplicationRouter() {
     return (
@@ -16,6 +17,14 @@ export default function AplicationRouter() {
                     element={
                         // <PrivateRoute>
                         <Dashboard />
+                        // </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/agendamento"
+                    element={
+                        // <PrivateRoute>
+                        <Agendamento />
                         // </PrivateRoute>
                     }
                 />
